@@ -133,4 +133,53 @@ public class interfaces {
 }
 
 
+Exercise 4: Interface for Calculations
+Objective: Create an interface for different calculation strategies.
+1. Define an Interface:
+o Create an interface Calculator with a method double calculate(double a, double b);
+2. Implement Different Calculation Strategies:
+o Create classes Add, Subtract, Multiply, and Divide that implement the Calculator
+interface.
+o Provide the logic for addition, subtraction, multiplication, and division.
+3. Test the Implementations:
+o In a main class, create instances of each calculation class and call their calculate
+method with sample inputs.
+
+
+    interface calculator{
+    double calculate(double a,double b);
+}
+class add implements calculator {
+     public double calculate(double a, double b) {
+         return a+b;
+     }
+}
+class subtract implements calculator{
+    public double calculate(double a, double b) {
+        return a-b;
+    }
+}
+class division implements calculator {
+    public double calculate(double a, double b) {
+        return a/b;
+    }
+}
+class multiply implements calculator {
+    public double calculate(double a, double b) {
+        return a*b;
+    }
+}
+public class main {
+    public static void main(String[] args){
+        add a = new add();
+        subtract s = new subtract();
+        division d = new division();
+        multiply m = new multiply();
+        System.out.println("addition"+ a.calculate(2,5));
+        System.out.println("subtract"+ s.calculate(2,5));
+        System.out.println("division"+ d.calculate(2,2));
+        System.out.println("multiply"+ m.calculate(2,5));
+    }
+    
+}
 
