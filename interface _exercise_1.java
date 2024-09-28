@@ -110,5 +110,27 @@ o Provide implementations for both methods.
     3. Test the Implementation:
 o In a main class, create a Duck object and call both methods. */
 
+interface flyable {
+    void fly();
+}
+interface swimmable{
+    void swim();
+}
+class duck implements flyable,swimmable {
+    public void fly (){
+        System.out.println("duck can't fly");
+    }
+    public void swim(){
+        System.out.println("duck can swim");
+    }
+}
+public class interfaces {
+    public static void main(String[] args ){
+        duck d = new duck();
+        d.fly();
+        d.swim();
+    }
+}
+
 
 
