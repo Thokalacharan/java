@@ -70,3 +70,38 @@ public class main{
         d.bark();
     }
 }
+
+Exercise 3: Flyable Interface
+Objective: Learn about multiple implementations of an interface.
+• Task: Create an interface Flyable with a method fly_obj(). Implement this interface in
+three classes: Spacecraft, Airplane, and Helicopter. Each class should provide its own
+implementation of the fly_obj() method.
+
+    interface flyable {
+    void fly();
+}
+class spacecraft implements flyable {
+    public void fly() {
+        System.out.println("it flys in the space");
+    }
+}
+class airplane implements flyable {
+    public void fly(){
+        System.out.println("it flys in the air");
+    }
+}
+class helicopter implements flyable {
+    public void fly() {
+         System.out.println("it flys in the air");
+    }
+}
+public class main {
+    public static void main(String[] args){
+        spacecraft s=new spacecraft();
+        airplane a=new airplane();
+        helicopter h=new helicopter();
+        s.fly();
+        a.fly();
+        h.fly();
+    }
+}
